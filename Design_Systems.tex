@@ -1,0 +1,383 @@
+\documentclass[11pt]{beamer}
+\usepackage{listings} % Include the listings-package
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb, amsfonts, latexsym, cancel}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{subfigure}
+\usepackage{hyperref}
+%\usepackage{authblk}
+\usepackage{blindtext}
+\usepackage{booktabs} % Allows the use of \toprule, 
+\usepackage{filecontents}
+\usepackage{courier} %% Sets font for listing as Courier.
+\usepackage{listings}
+%\usepackage{listings, xcolor}
+\lstset{
+tabsize = 2, %% set tab space width
+showstringspaces = false, %% prevent space marking in strings, string is defined as the text that is generally printed directly to the console
+numbers = left, %% display line numbers on the left
+commentstyle = \color{green}, %% set comment color
+keywordstyle = \color{blue}, %% set keyword color
+stringstyle = \color{red}, %% set string color
+rulecolor = \color{black}, %% set frame color to avoid being affected by text color
+basicstyle = \small \ttfamily , %% set listing font and size
+breaklines = true, %% enable line breaking
+numberstyle = \tiny,
+}
+\usepackage{caption}
+\DeclareCaptionFont{white}{\color{white}}
+\DeclareCaptionFormat{listing}{\colorbox{gray}{\parbox{\textwidth}{#1#2#3}}}
+\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
+\definecolor{urlColor}{rgb}{0.06, 0.3, 0.57}
+\definecolor{linkColor}{rgb}{0.57, 0.0, 0.04}
+\definecolor{fileColor}{rgb}{0.0, 0.26, 0.26}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=linkColor,
+    filecolor=fileColor,      
+    urlcolor=urlColor,
+}
+\urlstyle{same}
+\setbeamercovered{transparent}
+%\usetheme{Boadilla}
+\usetheme{CambridgeUS}
+%\usetheme{Berkeley}
+%\usetheme{Warsaw}
+%\usetheme{Madrid}
+
+\title[Presentación]{\bf\Huge Design Systems}
+\subtitle{}
+
+\author[asucasairet@unsa.edu.pe, bchavezn@unsa.edu.pe, agarciapu@unsa.edu.pe, gturpot@unsa.edu.pe]
+{
+	Braulio Armando Chavez Nina \inst{1} \\
+	Arnold Ismael Sucasaire Torres \inst{2} \\
+	Ayrton Robins Garcia Puma \inst{3} \\
+	Gustavo Jonathan Turpo Torres \inst{4} 
+}
+\institute[UNSA]
+{
+System Engineering School\\
+System Engineering and Informatic Department\\
+Production and Services Faculty\\
+San Agustin National University of Arequipa
+}
+
+\date[2020-10-06]{\scriptsize{2020-10-06}}
+%\logo{\includegraphics[width=3.0cm]{img/logo_unsa.jpg}}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}
+\frametitle{Content}
+\tableofcontents
+\end{frame}
+
+\section{Objetivo}
+\begin{frame}
+\frametitle{Objetivo}
+\begin{itemize}
+\item Analizar cómo el {\bf usuario} utiliza la {\bf tecnología}, y cómo esta tecnología se adapta a las {\bf necesidades del usuario}.
+\end{itemize}
+\end{frame}
+
+\section{Definición}
+\begin{frame}
+\frametitle{Definición}
+\begin{itemize}
+\item Sistema {\bf dinamico}, {\bf escalable} y ordenado de elementos graficos, codigo y documentacion, para la construción de cualquier producto, en todos los sectores.
+\end{itemize}
+\end{frame}
+
+\section{Elementos}
+\begin{frame}
+\frametitle{Elementos}
+\begin{itemize}
+\item Principios de diseño
+\item Tono de voz
+\item Colores y tipografia
+\item Componentes de diseño
+\end{itemize}
+\end{frame}
+
+\section{Principios de Diseño}
+\begin{frame}
+\frametitle{Principios de Diseño}
+\begin{itemize}
+    \textsc{Paradigmas que dirigen las desiciones del diseño,Esto refleja como un equipo de desarrollo toma sus desiciones}
+\end{itemize}
+\textbf{---------------------------------------}
+\begin{itemize}
+    \item Medium --> Es apropiado sobre la consistencia,{\bf dinamismo}. 
+    \item Aple --> Si se concidera la consistecia.
+    \item Asana --> Incrementa la confianza a travez de la {\bf claridad}.
+\end{itemize}
+{\includegraphics[width=3.0cm]{aple.png}}
+{\includegraphics[width=3.0cm]{asana.png}}
+{\includegraphics[width=3.0cm]{medium.jpg}}
+\end{frame}
+
+\section{Tono de voz}
+\begin{frame}
+\frametitle{Tono de voz}
+\begin{itemize}
+    \textsc{Como el producto se comunica con los asuarios: {\bf Mailchimp}}
+\end{itemize}
+\textbf{---------------------------------------}
+\begin{itemize}
+    \item {\bf "No usa"} un lenguaje tecnico. 
+    \item Maneja un humor apropiado.
+\end{itemize}
+{\includegraphics[width=6.0cm]{mailchimp.jpg}}
+\end{frame}
+
+\section{Colores y Tipografias}
+\begin{frame}
+\frametitle{Colores y tipografias}
+\begin{itemize}
+    \textsc{Caracteristicas basicas de todo lo que define al producto y a la marca:}
+\end{itemize}
+\textbf{---------------------------------------}
+\begin{itemize}
+    \item Colores.
+    \item Letras --> Contrastes.
+    \item Fuentes tipograficas (web,mobil).
+\end{itemize}
+\end{frame}
+
+\section{Componentes de Diseño}
+\begin{frame}
+\frametitle{Componentes de Diseño}
+\begin{itemize}
+    \textsc{Es una coleccion de elementos que se pueden utilizar {\bf multibles} veces dentro de un producto: {\bf Adobe, Audi :}}
+\end{itemize}
+\textbf{---------------------------------------}
+\begin{itemize}
+    \item Label.
+    \item Icono de Validacion.
+    \item Botones (Tamaños).
+\end{itemize}
+{\includegraphics[width=5.0cm]{adobe.jpeg}}
+{\includegraphics[width=5.0cm]{audi.png}}
+\end{frame}
+
+\section{Guías de Diseño}
+\begin{frame}
+\frametitle{Guías de Diseño}
+\begin{itemize}
+    \textsc{Permite elaborar diseños de manera más {\bf rápida} y {\bf estandarizada}  el cuál presenta las siguientes ventajas :}
+\end{itemize}
+\textbf{---------------------------------------}
+\begin{itemize}
+    \item Permite centrarse en la experiencia de usuario
+    \item Evita que se reinvente la rueda
+    \item Utiliza guías que fueron usadas y probadas
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Guías de Diseño - Ilustraciones}
+{\includegraphics[width=3.0cm]{shopify.jpg}}
+{\includegraphics[width=7.0cm]{b_shopify.png}}
+\centering
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Guías de Diseño - Onboarding}
+{\includegraphics[width=3.0cm]{salesforce.png}}
+{\includegraphics[width=8.0cm]{g_salesforce.png}}
+\centering
+\end{frame}
+
+\section{Animaciones}
+\begin{frame}
+\frametitle{Animaciones}
+{\includegraphics[width=5.0cm]{md_loaders.png}}
+{\includegraphics[width=5.0cm]{md_loaders_spect.png}}
+\centering
+\end{frame}
+
+\begin{frame}
+\frametitle{Animaciones - Micro Interacciones}
+{\includegraphics[width=8.0cm]{md_mi_f.png}}
+\centering
+\end{frame}
+
+\begin{frame}
+\frametitle{Animaciones - Velocidad}
+{\includegraphics[width=8.0cm]{md_speed.png}}
+{\includegraphics[width=8.0cm]{md_speed_css.png}}
+\centering
+\end{frame}
+
+\begin{frame}
+\frametitle{Animaciones - LottieFiles}
+{\includegraphics[width=6.0cm]{lottie.png}}
+{\includegraphics[width=5.0cm]{lottie_animation.png}}
+\centering
+\end{frame}
+
+\section{Esqueumorfismo}
+\begin{frame}
+\frametitle{Esqueumorfismo}
+{\includegraphics[width=12.0cm]{esqueumorfismo_plano.jpg}}
+\centering
+\end{frame}
+
+\section{Diseño atómico}
+\begin{frame}
+\frametitle{Diseño atómico}
+\begin{itemize}
+    \item{Es un sistema de trabajo que se basa en la creación de elementos modulares sencillos para crear estructuras de información mucho mas complejas. La mayoría de los sistemas de diseño, están basados en el.}
+    \item{Consiste en tratar a los elementos de la interfaz, como átomos donde se relacionan entre si.}
+    {\includegraphics[width=9.5cm]{atomico.jpg}}
+\end{itemize}
+\end{frame}
+
+\section{Reglas de diseño}
+\begin{frame}
+\frametitle{Reglas de diseño}
+\begin{itemize}
+    \item{Tener en cuenta la cercanía del modelo de implementación al modelo mental del usuario, esta debe acercarse lo mas posible.}
+    \item{Reglas de la comunicación visual -> armonía, ritmo, consistencia}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Reglas de diseño}
+\begin{itemize}
+    \item{Tamaño de los elementos y espacio entre ellos}
+    {\includegraphics[width=10cm]{espaciado.jpg}}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Reglas de diseño}
+\begin{itemize}
+    \item{Ritmo de la interfaz: Combinación de elementos que se repiten en intervalos consistentemente visuales}
+    {\includegraphics[width=10cm]{ritmo.png}}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Reglas de diseño}
+\begin{itemize}
+    \textsc{Uso de la tipografía:}
+\end{itemize}
+\begin{itemize}
+    \item{Se debe usar fuentes claras y legibles, que se puedan leer rápida y fácilmente}
+    {\includegraphics[width=10cm]{fuente.jpg}}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Reglas de diseño}
+\begin{itemize}
+    \textsc{Uso de la tipografía:}
+\end{itemize}
+\begin{itemize}
+    \item{La alineación del texto debe estar hecha de forma que no canse al leer, es preferible usar el texto alineado a la derecha}
+    {\includegraphics[width=10cm]{alineacion.jpg}}
+\end{itemize}
+\end{frame}
+
+\section{Ejemplos en producción}
+\begin{frame}
+\frametitle{Ejemplos en producción}
+\begin{itemize}
+    \textsc{Material design: }
+\end{itemize}
+\begin{itemize}
+    \item{Sistema de diseño desarrollado por Google que se usa en la mayoría de sus aplicaciones}
+    {\includegraphics[width=10cm]{material_design.jpg}}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Ejemplos en producción}
+\begin{itemize}
+    \textsc{Design Systems Repo: }\\
+\end{itemize}
+\begin{itemize}
+    \item{Es un repositorio de sistemas de diseño}
+    {\includegraphics[width=10cm]{design_systems_rep.jpg}}
+\end{itemize}
+\end{frame}
+
+\section{Modelo de Diseño}
+\begin{frame}
+\frametitle{Modelo de Diseño}
+\begin{itemize}
+    \textsc{Aplicacion Original: }
+\end{itemize}
+\begin{itemize}
+\includegraphics[width=6cm, height=5cm]{Imagen1.png}
+\centering
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Modelo de Diseño}
+\begin{itemize}
+    \textsc{Aplicación Rediseñada: }
+\end{itemize}
+\begin{itemize}
+\includegraphics[width=7cm, height=6cm]{Imagen2.png}
+\centering
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Modelo de Diseño}
+\begin{itemize}
+    \textsc{Aplicación Rediseñada: }
+\end{itemize}
+\begin{itemize}
+\includegraphics[width=7cm, height=6cm]{Imagen3.png}
+\centering
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Modelo de Diseño}
+\begin{itemize}
+    \textsc{Aplicación Rediseñada: }
+\end{itemize}
+\begin{itemize}
+\includegraphics[width=11cm, height=6cm]{Imagen4.png}
+\centering
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Modelo de Diseño}
+\begin{itemize}
+    \textsc{Recomendaciones: }
+\end{itemize}
+\begin{itemize}
+\includegraphics[width=11cm, height=6cm]{Imagen5.png}
+\centering
+\end{itemize}
+\end{frame}
+
+\section{References}
+%References frame
+\begin{frame}
+\frametitle{References}
+\begin{itemize}
+\item \href{https://www.youtube.com/watch?v=meO8gkOK1pc&feature=youtu.be}{Carlos A.,"Design Systems",Jornada Iberoamericana de HCI,2020}
+
+\end{itemize}
+\end{frame}
+
+\end{document}
